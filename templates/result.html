@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Details</title>
+    <style>
+        body {
+            background-color: #0D0221;
+            color: #A6CFD5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #0F084B;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px; /* Set a maximum width */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        .link {
+            color: #C2E7D9;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 20px;
+            color: #C2E7D9;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+            .container {
+                border-radius: 0; /* Remove border radius */
+                padding: 10px;
+                width: 100%; /* Full width */
+                height: auto; /* Auto height */
+            }
+            .link {
+                font-size: 16px; /* Slightly smaller font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Result Details</h1>
+        <p>Click the link below to view the search result:</p>
+        <a class="link" href="{{ url }}" target="_blank">{{ url }}</a>
+        <footer>&copy; 2024</footer>
+    </div>
+</body>
+</html>
