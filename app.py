@@ -13,9 +13,9 @@ def search_page():
 
         response = MessagingResponse()
         q = user_msg + " site:google.com"
-        result = [url for url in search(q, num_results=3)]
+        results = [url for url in search(q)][:3]  # Limit to the first 3 results
 
-        return render_template('search.html', results=result)
+        return render_template('search.html', results=results)
 
     return render_template('search.html', results=None)
 
